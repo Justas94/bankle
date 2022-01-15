@@ -42,17 +42,6 @@ btnScrollTo.addEventListener("click", function (e) {
   section1.scrollIntoView({ behavior: "smooth" });
 });
 
-// Page Navigation
-
-// document.querySelectorAll(".nav__link").forEach(function (e) {
-//   e.addEventListener("click", function (e) {
-//     e.preventDefault();
-
-//     const id = this.getAttribute("href");
-//     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-//   });
-// });
-
 document.querySelector(".nav__links").addEventListener("click", function (e) {
   if (e.target.classList.contains("nav__link")) {
     e.preventDefault();
@@ -101,18 +90,6 @@ const handleHover = function (e) {
 nav.addEventListener("mouseover", handleHover.bind(0.5));
 
 nav.addEventListener("mouseout", handleHover.bind(1));
-
-// Sticky navigation
-
-// const initialCoords = section1.getBoundingClientRect();
-
-// window.addEventListener("scroll", function () {
-//   if (window.scrollY > initialCoords.top) {
-//     nav.classList.add("sticky");
-//   } else {
-//     nav.classList.remove("sticky");
-//   }
-// });
 
 const header = document.querySelector(".header");
 const navHeight = nav.getBoundingClientRect().height;
